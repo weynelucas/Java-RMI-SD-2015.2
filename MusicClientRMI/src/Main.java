@@ -32,7 +32,7 @@ public class Main {
 			}
 		}).start();
 		
-		new ClientThread(3, new ClientBusinessProcedure() {
+		new ClientThread(2, new ClientBusinessProcedure() {
 			@Override
 			public void execute(Integer clientId, MusicService musicService) {
 				try {
@@ -42,8 +42,7 @@ public class Main {
 					e.printStackTrace();
 				}
 			}
-		}).start();
-		
+		}).start();	
 	}
 
 }

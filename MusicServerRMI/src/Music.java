@@ -12,6 +12,10 @@ public class Music implements Serializable{
 	private String author;
 	private String album;
 	
+	//Forma de saber de qual servidor o cliente está recebendo o objeto
+	//Servidor seta o atributo antes de responder ao cliente
+	private String server;
+	
 	public Music(String title, String author, String album) {
 		this.title = title;
 		this.author = author;
@@ -42,8 +46,16 @@ public class Music implements Serializable{
 		this.title = title;
 	}
 	
+	public String getServer() {
+		return server;
+	}
+	
+	public void setServer(String server) {
+		this.server = server;
+	}
+	
 	@Override
 	public String toString() {
-		return "[" + title + ", " + author + ", " + album + "]";
+		return "[" + server + ", " + title + ", " + author + ", " + album + "]";
 	}
 }
