@@ -14,8 +14,7 @@
 # Endereço GitHub:	https://github.com/weynelucas/Trabalho_SD_2015_2.git
 
 
-Servidor de músicas no formato mp3 que oferece a funcionalidade de buscar uma música pelo seu nome; com replicação, 
-consistência e balanceamento de carga.
+Servidor de músicas no formato mp3 que oferece a funcionalidade de buscar uma música pelo seu nome; com replicação, consistência e balanceamento de carga.
 
 1. Tipo do projeto: 
 	a) Versão simplificada na branch master;
