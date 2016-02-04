@@ -29,4 +29,13 @@ public class MusicServiceImpl extends UnicastRemoteObject implements MusicServic
 		return null;
 	}
 
+	@Override
+	public boolean insertMusic(Music music) throws RemoteException {
+		if(music!=null){
+			musicList.add(music);
+			return true;
+		}
+		return false;
+	}
+
 }
