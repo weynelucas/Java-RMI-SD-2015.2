@@ -12,7 +12,7 @@ public class Main {
 			@Override
 			public void execute(Integer clientId, MusicService musicService) {
 				try {
-					Music music = musicService.findByTitle("Someday");
+					Music music = musicService.findByTitle("Musica 1");
 					System.out.println("Resposta ao cliente " + clientId + ": " + music);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -20,17 +20,30 @@ public class Main {
 			}
 		}).start();
 		
-/*		new ClientThread(2, new ClientBusinessProcedure() {
+		new ClientThread(2, new ClientBusinessProcedure() {
 			@Override
 			public void execute(Integer clientId, MusicService musicService) {
 				try {
-					Music music = new Music("Someday", "The Strokes", "Is This It");
-					System.out.println("Resposta ao cliente " + clientId + ": " + musicService.insertMusic(music));
+					Music music = musicService.findByTitle("Musica 2");
+					System.out.println("Resposta ao cliente " + clientId + ": " + music);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
-		}).start();*/
+		}).start();
+		
+		new ClientThread(3, new ClientBusinessProcedure() {
+			@Override
+			public void execute(Integer clientId, MusicService musicService) {
+				try {
+					Music music = musicService.findByTitle("Musica 3");
+					System.out.println("Resposta ao cliente " + clientId + ": " + music);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}).start();
+		
 	}
 
 }
