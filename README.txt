@@ -1,45 +1,43 @@
-###############################################################################
-# Universidade Federal do Ceará.
-# Redes de Computadores & Sistemas Distribuídos.
+# Universidade Federal do Ceará
+# Centro de Tecnologia
+# Departamento de Engenharia de Teleinformática
 #
-# Trabalho 2 - Implementar Replicação (3 Instâncias de Servidor)
+# Trabalho de Sistemas Distribuídos 2015.2
+# Professor Dr.: Flávio Sousa
+# 
 #
-# Prof:		Flávio R. C. Sousa
+# Equipe:	Lucas Weyne  
+#		Maria Thereza Rodrigues 	
+#		
+#		
 #
-# Alunos:	Jefferson Silva
-#		João Marcos Epifanio
-#		Matheus Souza de Carvalho
-#		Thiago Pereira Rosa
-#
-# GitHub:	https://github.com/kamihouse/UFC-Redes-Replicacao
-###############################################################################
+# Endereço GitHub:	https://github.com/weynelucas/Trabalho_SD_2015_2.git
 
-Sistema de Postagens de Notícias em Python com Replicação, Consistência e 
-Balanceamento de Carga com armazenamento em Arquivos de texto.
 
-1 - Requerido:
-	a) Python 2.7 (+ as bibliotecas abaixo)
-		a.a) sockets
-		a.b) os
-		a.c) sys
-		a.d) replicação (nossa biblioteca de replicação)
-		a.e) random
-	b) S.O. Linux e/ou Unix.
-	c) Estar conectado em uma Rede de Computadores.
+Servidor de músicas no formato mp3 que oferece a funcionalidade de buscar uma música pelo seu nome; com replicação, 
+consistência e balanceamento de carga.
 
-2 - Recomendações:
-	a) Utilize os Servidores e o Middleware em ambiente Linux de preferência.
+1. Tipo do projeto: 
+	a) Versão simplificada na branch master;
+	b) Versão completa na branch Replicacao.
 
-2 - Como executar os Servidores:
-	a) utilize o comando abaixo para iniciar o servidor:
-		python server.py
-		(Execute para cada um dos servidores que deseja iniciar)
-
-3 - Como executar os Clientes:
-	a) (Linha de Comando) Executar o cliente em qualquer máquina com os seguintes comandos:
-		a.a) python client.py
-		a.b) Efetuar postagens com os campos TÍTULO e MENSAGEM.
-			a.b.a) Para encerrar CTRL + C
-	b) (Interface Gráfica) Executar o cliente em qualquer máquina com os seguintes comandos:
-		a.a) python clientApp.py
-		a.b) Efetuar postagens com os campos TÍTULO e MENSAGEM.
+2. Descrição do ambiente, tecnologias e SO: 
+	a) Versão do JDK: 1.8.0_60-b27;
+	b) Tecnologias: 
+		b.a) Java RMI;
+	c) Sistema Operacional: Xubuntu 14.04;
+	d) IDE: Eclipse Luna;
+	e) Conexão com uma Rede de Computadores. 
+	
+3. Passo a passo:
+	a) Executar projeto MusicServerReplicaRMI;
+		Resultado esperado: servidor exibe mensagem "Servidor secundário (backup) inicializado!";
+	b) Executar projeto MusicServerRMI;
+		Resultado esperado: servidor exibe mensagem "Servidor primário inicializado!";
+	c) Executar projeto MusicClientRMI;
+		Resultado esperado: programa exibe as músicas requisitadas por cada cliente e de qual servidor veio a resposta;
+	d) Restrições
+		d.a) Se for executar a aplicação novamente para ver o resultado do programa cliente, executar apenas o projeto 		MusicClientRMI
+		d.b) Se for rodar novamente os projetos MusicServerReplicaRMI e/ou MusicServerRMI, lembrar de parar os 				processos destas aplicações para liberar as portas usadas no rmiregistry (2000 e 4000, reespectivamente)
+	
+	
