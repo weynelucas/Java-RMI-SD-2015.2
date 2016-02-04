@@ -38,8 +38,8 @@ consistência e balanceamento de carga.
 		Resultado esperado: programa exibe as músicas requisitadas por cada cliente e de qual servidor veio a resposta;
 	d) Restrições
 		d.a) Se for executar a aplicação novamente para ver o resultado do programa cliente, executar apenas o projeto
-		MusicClientRMI
+MusicClientRMI
 		d.b) Se for rodar novamente os projetos MusicServerReplicaRMI e/ou MusicServerRMI, lembrar de parar os
-		processos destas aplicações para liberar as portas usadas no rmiregistry (2000 e 4000, reespectivamente)
+processos destas aplicações para liberar as portas usadas no rmiregistry (2000 e 4000, reespectivamente)
 	
 	
